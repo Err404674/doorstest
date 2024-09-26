@@ -1729,7 +1729,7 @@ local SelfGroupBox = Tabs.Visuals:AddRightGroupbox("Self") do
     SelfGroupBox:AddToggle("NoCamShake", {
         Text = "No Camera Shake",
         Default = false,
-        Visible = ExecutorSupport["require"]
+        Visible = require
     })
 
     SelfGroupBox:AddToggle("NoCutscenes", {
