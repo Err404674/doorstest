@@ -3598,7 +3598,7 @@ end)
 
 --// Connections \\--
 
-if ExecutorSupport["hookmetamethod"] then
+if hookmetamethod then
     mtHook = hookmetamethod(game, "__namecall", function(self, ...)
         local args = {...}
         local namecallMethod = getnamecallmethod()
