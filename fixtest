@@ -2961,7 +2961,7 @@ Toggles.FakeRevive:OnChanged(function(value)
 		local function usePreviewCharacter(doStepped)
 			-- fuck you roblox for using head instead of primarypart or char:GetPivot() 
             -- mstudio45 2023 ^^
-            if ExecutorSupport["hookmetamethod"] then
+            if getgenv().mspaint_loaded == true then
                 _fixDistanceFromCharacter = hookmetamethod(localPlayer, "__namecall", function(self, ...)
                     local method = getnamecallmethod();
                     local args = {...}
