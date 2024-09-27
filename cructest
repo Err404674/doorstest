@@ -222,7 +222,7 @@ end
 
 -- Create new signal
 vynixu_crucifix_manager.Signals.InputBegan = UserInputService.InputBegan:Connect(function(input, gameProcessed)
-    if not gameProcessed and input.UserInputType == Enum.UserInputType.MouseButton1 and localCharacter:FindFirstChild("Crucifix") then
+    if not gameProcessed and input.UserInputType == Enum.UserInputType.Touch and localCharacter:FindFirstChild("Crucifix") then
         local playerTool = localCharacter.Crucifix
         local config = vynixu_crucifix_manager.Crucifixes[playerTool]
 
