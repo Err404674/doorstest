@@ -239,7 +239,7 @@ vynixu_crucifix_manager.Signals.InputBegan = UserInputService.InputBegan:Connect
             if model:IsA("Model") and not model:GetAttribute("BeingBanished") and not table.find(config.IgnoreList, model) then
                 local isCustomEntity = model:GetAttribute("CustomEntity")
 
-                if config.EntitiesOnly == false then
+                if config.EntitiesOnly == true and not isCustomEntity then
                     return -- Ignore if not custom entity
                 end
 
