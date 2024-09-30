@@ -148,7 +148,7 @@ function Crucifix(model, playerTool, config)
         TweenService:Create(entityPart, TweenInfo.new(3, Enum.EasingStyle.Back, Enum.EasingDirection.In), { CFrame = repentance.Entity.CFrame - Vector3.new(0, 25, 0) }):Play()
 		
         WaitUntil(sound, 6.75)
-	else
+	elseif config.Resist == true then
 		WaitUntil(sound, 4)
 
 		TweenService:Create(crucifix.BodyAngularVelocity, TweenInfo.new(3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), { AngularVelocity = Vector3.new() }):Play()
