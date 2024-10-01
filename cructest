@@ -22,9 +22,7 @@ local assets = {
     Repentance = LoadCustomInstance("https://github.com/RegularVynixu/Utilities/blob/main/Doors/Entity%20Spawner/Assets/Repentance.rbxm?raw=true"),
     Crucifix = LoadCustomInstance("https://github.com/RegularVynixu/Utilities/raw/refs/heads/main/Doors/Item%20Spawner/Assets/Crucifix.rbxm")
 }
-local moduleScripts = {
-	Main_Game = require(localPlayerGui.MainUI.Initiator.Main_Game),
-}
+
 getgenv().vynixu_crucifix_manager = {
     Signals = {},
     Crucifixes = {}
@@ -84,7 +82,6 @@ function Crucifix(model, playerTool, config)
 	local pentagram = repentance.Pentagram
 	local entityPart = repentance.Entity
 	local sound = (config.Resist and crucifix.SoundFail or crucifix.Sound)
-	local shaker = moduleScripts.Main_Game.camShaker:StartShake(5, 20, 2, Vector3.new())
 
     -- Repentance setup
 	repentance:PivotTo(CFrame.new(result.Position))
